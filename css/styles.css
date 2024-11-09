@@ -24,33 +24,37 @@ header {
 
 main {
     margin: 0 auto;
-    width: 90%;
-    max-width: 1440px;
+    width: auto;
+    max-width: 1280px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 main h2 {
-    flex: 1 1 50%;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 main .contenedor__productos {
-    flex: 1 1 30%;
+    flex: 1 1 20%;
+    padding: 40px;
 }
 
 main .contenedor__formulario__productos {
-    flex: 1 1 20%;
+    flex: 1 1 8%;
+    padding: 40px;
 }
 
-.contenedor__productos {
+main .contenedor__productos .contenedor_productos_cards {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* height: 50vh; */
+    justify-content: space-around;
 }
 
 .contenedor__productos .card__producto {
     display: flex;
+    /* flex-grow: 1; */
     flex-direction: column;
     background-color: var(--color-primario);
     border-radius: 10px;
@@ -107,3 +111,70 @@ main .contenedor__formulario__productos {
     color: var(--color-secundario);
     border: var(--color-secundario) 3px solid;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 2rem 0;
+    background-color: var(--color-primario);
+    color: white;
+}
+
+footer .contenedor_redes_sociales {
+    display: flex;
+    gap: 10px;
+}
+
+/* RESPONSIVIDAD */
+
+@media (max-width: 1240px) { 
+
+    main .contenedor__productos {
+        flex: 1 1 35%;
+        padding: 20px;
+    }
+
+    main .contenedor__formulario__productos {
+        flex: 1 1 auto;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    
+    main {
+        flex-direction: column-reverse;
+    }
+
+    main .contenedor__productos {
+        flex: 1 1 auto;
+        padding: 40px 0;
+    }
+    
+    main .contenedor__formulario__productos {
+        flex: 1 1 auto;
+        padding: 40px;
+    }
+
+  }
+
+  @media (max-width: 430px) {
+    
+    main {
+        flex-direction: column-reverse;
+    }
+
+    main .contenedor__productos {
+        flex: 1 1 auto;
+        padding: 40px 0;
+    }
+    
+    main .contenedor__formulario__productos {
+        flex: 1 1 auto;
+        padding: 40px;
+    }
+
+  }
