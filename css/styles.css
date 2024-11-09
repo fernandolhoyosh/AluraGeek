@@ -37,7 +37,7 @@ main h2 {
 
 main .contenedor__productos {
     flex: 1 1 20%;
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 main .contenedor__formulario__productos {
@@ -48,6 +48,8 @@ main .contenedor__formulario__productos {
 main .contenedor__productos .contenedor_productos_cards {
     display: flex;
     flex-wrap: wrap;
+    height: 50vh;
+    overflow: auto;
     gap: 10px;
     justify-content: space-around;
 }
@@ -133,12 +135,12 @@ footer .contenedor_redes_sociales {
 
     main .contenedor__productos {
         flex: 1 1 35%;
-        padding: 20px;
+        padding: 40px 20px;
     }
 
     main .contenedor__formulario__productos {
         flex: 1 1 auto;
-        padding: 20px;
+        padding: 40px 20px;
     }
 
 }
