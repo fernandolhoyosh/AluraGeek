@@ -6,6 +6,7 @@
 :root {
     --color-primario: #5300C8;
     --color-secundario: #03318C;
+    --fuente-principal: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 header {
@@ -31,7 +32,7 @@ main {
 }
 
 main h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--fuente-principal);
     text-align: center;
     margin-bottom: 40px;
 }
@@ -57,7 +58,7 @@ main .contenedor__productos .contenedor_productos_cards {
 
 .contenedor__productos .card__producto {
     display: flex;
-    /* flex-grow: 1; */
+    height: 258px;
     flex-direction: column;
     background-color: var(--color-primario);
     border-radius: 10px;
