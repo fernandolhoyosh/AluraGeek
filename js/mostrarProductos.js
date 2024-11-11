@@ -1,4 +1,4 @@
-import { conexion } from "./conexion.js";
+import { conexionAPI } from "./conexionAPI.js";
 
 const listaProductos = document.querySelector("[data-lista]");
 
@@ -17,7 +17,7 @@ function crearCard(nombre, precio, imagen){
 }
 
 async function mostrarProductos(){
-    const data = await conexion.listarProductos();
+    const data = await conexionAPI.listarProductos();
     console.log(data)
     data.forEach(producto => listaProductos.appendChild(crearCard(producto.nombre, producto.precio, producto.imagen)));
 }

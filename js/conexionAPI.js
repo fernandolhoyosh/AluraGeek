@@ -4,6 +4,6 @@ async function listarProductos() {
     return data;
 }
 
-export const conexion = {
+export const conexionAPI = {
     listarProductos
 }
