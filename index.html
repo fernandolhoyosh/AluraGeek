@@ -18,10 +18,10 @@
         
         <section class="contenedor__formulario__productos">
             <h2>AGREGAR PRODUCTO:</h2>    
-            <form class="formulario__productos" action="">
-                <input type="text" name="nombre" placeholder="Nombre ...">
-                <input type="number" name="precio" placeholder="Precio ...">
-                <input type="text" name="imagen" placeholder="Imagen ...">
+            <form class="formulario__productos" data-formulario>
+                <input type="text" name="nombre" placeholder="Nombre ..." data-nombre>
+                <input type="number" name="precio" placeholder="Precio ..." data-precio>
+                <input type="text" name="imagen" placeholder="Imagen ..." data-imagen>
                 <div class="formulario__productos-botones">
                     <input type="submit" value="Enviar">
                     <button>Limpiar</button>
@@ -41,5 +41,6 @@
         </div>
     </footer>
     <script src="js/mostrarProductos.js" type="module"></script>
+    <script src="js/crearProducto.js" type="module"></script>
 </body>
 </html>
