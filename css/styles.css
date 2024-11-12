@@ -58,7 +58,7 @@ main .contenedor__productos .contenedor_productos_cards {
 
 .contenedor__productos .card__producto {
     display: flex;
-    height: 258px;
+    height: 238px;
     flex-direction: column;
     background-color: var(--color-primario);
     border-radius: 10px;
@@ -156,6 +156,11 @@ footer .contenedor_redes_sociales {
     main .contenedor__productos {
         flex: 1 1 auto;
         padding: 40px 0;
+    }
+
+    main .contenedor__productos .contenedor_productos_cards {
+        overflow: hidden;
+        height: auto;
     }
     
     main .contenedor__formulario__productos {
