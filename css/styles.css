@@ -67,7 +67,7 @@ main .contenedor__productos .contenedor_productos_cards {
     gap: 10px;
 }
 
-.contenedor__productos .card__producto img {
+.contenedor__productos .card__producto .imagen__producto {
     width: 174px;
     height: 174px;
 }
@@ -75,6 +75,13 @@ main .contenedor__productos .contenedor_productos_cards {
 .contenedor__productos .card__producto .card__producto-info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor__productos .card__producto .card__producto-info button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
 }
 
 
