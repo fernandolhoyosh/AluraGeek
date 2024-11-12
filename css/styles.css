@@ -70,6 +70,7 @@ main .contenedor__productos .contenedor_productos_cards {
 .contenedor__productos .card__producto .imagen__producto {
     width: 174px;
     height: 174px;
+    border-radius: 10px;
 }
 
 .contenedor__productos .card__producto .card__producto-info {
