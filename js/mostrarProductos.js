@@ -6,11 +6,13 @@ function crearCard(nombre, precio, imagen){
     const producto = document.createElement("li");
     producto.className = "card__producto";
     producto.innerHTML = `
-    <img src="${imagen}" alt="imagen producto ${nombre}">
+    <img src="${imagen}" class="imagen__producto" alt="imagen producto ${nombre}">
     <p>${nombre}</p>
     <div class="card__producto-info">
         <p>$ ${precio}</p>
-        <button>borrar</button>
+        <button>
+            <img src="../assets/icon-trash.png">
+        </button>
     </div>`;
 
     return producto;
