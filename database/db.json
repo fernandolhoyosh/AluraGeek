@@ -1,17 +1,22 @@
 {
-    "productos": [
-        {
-            "nombre": "Stormtrooper",
-            "precio": "60,00",
-            "imagen": "../assets/producto.png",
-            "id": 1
-        },
-        {
-            "nombre": "Game Boy Classic",
-            "precio": "120,00",
-            "imagen": "../assets/gameboy.png",
-            "id": 2
-        }
-
-    ]
+  "productos": [
+    {
+      "nombre": "Stormtrooper",
+      "precio": "60,00",
+      "imagen": "../assets/producto.png",
+      "id": "1"
+    },
+    {
+      "nombre": "Game Boy Classic",
+      "precio": "120,00",
+      "imagen": "../assets/gameboy.png",
+      "id": "2"
+    },
+    {
+      "id": "ae84",
+      "nombre": "Cortina enrollable 110x130",
+      "precio": "26.00",
+      "imagen": "https://http2.mlstatic.com/D_NQ_NP_616251-MCO78192901456_082024-O.webp"
+    }
+  ]
 }
