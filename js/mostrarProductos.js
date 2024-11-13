@@ -28,13 +28,16 @@ const listaProductosVacia = () => {
 }
 
 async function mostrarProductos(){
-    const data = await conexionAPI.listarProductos();
-
-    if (data.length == 0) {
-        listaProductos.appendChild(listaProductosVacia());
-    }else {
-        /* console.log(data) */
-        data.forEach(producto => listaProductos.appendChild(crearCard(producto.id, producto.nombre, producto.precio, producto.imagen)));
+    try {
+        const data = await conexionAPI.listarProductos();
+        if (data.length == 0) {
+            listaProductos.appendChild(listaProductosVacia());
+        }else {
+            /* console.log(data) */
+            data.forEach(producto => listaProductos.appendChild(crearCard(producto.id, producto.nombre, producto.precio, producto.imagen)));
+        }
+    } catch (error) {
+        listaProductos.innerHTML = `<h2 class="mensaje-error-productos">Ha ocurrido un problema con la conexión :(</h2>`;
     }
 }
 
