@@ -19,10 +19,23 @@ function crearCard(id, nombre, precio, imagen){
     return producto;
 }
 
+const listaProductosVacia = () => {
+    const mensaje = document.createElement("h1");
+    mensaje.className = "mensaje-sin-productos";
+    mensaje.textContent = `No se han agregado productos`;
+
+    return mensaje;
+}
+
 async function mostrarProductos(){
     const data = await conexionAPI.listarProductos();
-    /* console.log(data) */
-    data.forEach(producto => listaProductos.appendChild(crearCard(producto.id, producto.nombre, producto.precio, producto.imagen)));
+
+    if (data.length == 0) {
+        listaProductos.appendChild(listaProductosVacia());
+    }else {
+        /* console.log(data) */
+        data.forEach(producto => listaProductos.appendChild(crearCard(producto.id, producto.nombre, producto.precio, producto.imagen)));
+    }
 }
 
 mostrarProductos();
