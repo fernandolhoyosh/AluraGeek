@@ -92,6 +92,20 @@ main .contenedor__productos .contenedor_productos_cards {
     gap: 40px;
 }
 
+.contenedor-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.error {
+    margin-top: 65px;
+    position: absolute;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    display: none;
+}
+
 .formulario__productos input[type="text"], .formulario__productos input[type="number"] {
     width: auto;
     height: 58px;
