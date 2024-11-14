@@ -16,7 +16,12 @@ async function enviarProducto(nombre, precio, imagen) {
             imagen: imagen
         })
     });
-    const data = await conexion.json();
+    const data = conexion.json();
+
+    if (!conexion.ok) {
+        throw new Error("No se puede enviar el producto. Error de conexion");
+    }
+
     return data;
 }
 
