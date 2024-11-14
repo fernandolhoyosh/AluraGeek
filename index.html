@@ -19,9 +19,18 @@
         <section class="contenedor__formulario__productos">
             <h2>AGREGAR PRODUCTO:</h2>    
             <form class="formulario__productos" data-formulario>
-                <input type="text" name="nombre" placeholder="Nombre ..." data-nombre>
-                <input type="number" name="precio" placeholder="Precio ..." data-precio>
-                <input type="text" name="imagen" placeholder="Imagen ..." data-imagen>
+                <div class="contenedor-input">
+                    <input type="text" name="nombre" placeholder="Nombre ..." data-nombre>
+                    <span id="errorNombre" class="error"></span>
+                </div>
+                <div class="contenedor-input">
+                    <input type="number" name="precio" placeholder="Precio ..." data-precio>
+                    <span id="errorPrecio" class="error"></span>
+                </div>
+                <div class="contenedor-input">
+                    <input type="text" name="imagen" placeholder="Imagen ..." data-imagen>
+                    <span id="errorImagen" class="error"></span>
+                </div>
                 <div class="formulario__productos-botones">
                     <input type="submit" value="Enviar">
                     <button>Limpiar</button>
