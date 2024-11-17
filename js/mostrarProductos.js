@@ -37,7 +37,7 @@ async function mostrarProductos(){
             data.forEach(producto => listaProductos.appendChild(crearCard(producto.id, producto.nombre, producto.precio, producto.imagen)));
         }
     } catch (error) {
-        listaProductos.innerHTML = `<h2 class="mensaje-error-productos">Ha ocurrido un problema con la conexión :(</h2>`;
+        listaProductos.innerHTML = `<h3 class="mensaje-error-productos">${error.message}</h3>`;
     }
 }
 

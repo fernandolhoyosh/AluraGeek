@@ -45,12 +45,12 @@ async function insertarProducto(evento){
 
     // Prevenir el envío del formulario si no es válido
     if (!esValido) {
-        evento.preventDefault();
+        return;
     } else {
         try {
             await conexionAPI.enviarProducto(nombre, precio, imagen);
         } catch (error) {
-            alert(error);
+            alert(error.message);
         }
     }
 }
