@@ -11,7 +11,7 @@ function crearCard(id, nombre, precio, imagen){
     <p>${nombre}</p>
     <div class="card__producto-info">
         <p>$ ${precio}</p>
-        <button class="btn-eliminar-producto">
+        <button class="btn-eliminar-producto" title="Eliminar">
             <img src="../assets/icon-trash.png">
         </button>
     </div>`;
