@@ -5,7 +5,7 @@ async function listarProductos() {
         const data = await conexion.json();
         return data;
     } catch (error) {
-        throw new Error("No se puede cargar la lista de productos. Ha ocurrido un problema con la conexión :(");
+        throw new Error("No se puede cargar la lista de productos. Ha ocurrido un problema con la conexión 😿");
     }
     
 }
