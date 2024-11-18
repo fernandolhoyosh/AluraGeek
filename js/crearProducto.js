@@ -1,9 +1,11 @@
 import { conexionAPI } from "./conexionAPI.js";
 
 const formulario = document.querySelector("[data-formulario]");
+const botonLimpiar = document.querySelector("#btn-limpiar-formulario");
 
 async function insertarProducto(evento){
     evento.preventDefault();
+
     const nombre = document.querySelector("[data-nombre]").value;
     const precio = document.querySelector("[data-precio]").value;
     const imagen = document.querySelector("[data-imagen]").value;
@@ -29,10 +31,24 @@ async function insertarProducto(evento){
         esValido = false;
     }
 
+    // Validar que el campo nombre no exceda los 50 caracteres
+    if (nombre.length > 50) {
+        errorNombre.style.display = 'block';
+        errorNombre.textContent = '⛔ El campo Nombre debe contener máximo 50 caracteres.';
+        esValido = false;
+    }
+
     // Validar que el campo precio no esté vacío
     if (precio.trim() === '') {
         errorPrecio.style.display = 'block';
         errorPrecio.textContent = '⛔ El campo Precio no debe estar vacío.';
+        esValido = false;
+    }
+
+     // Validar que el campo precio no exceda los 50 caracteres
+     if (precio.length > 10) {
+        errorPrecio.style.display = 'block';
+        errorPrecio.textContent = '⛔ El campo Precio debe contener máximo 10 caracteres.';
         esValido = false;
     }
 
@@ -55,4 +71,12 @@ async function insertarProducto(evento){
     }
 }
 
+const limpiarFormulario = (e) => {
+    e.preventDefault();
+    document.querySelector("[data-nombre]").value = "";
+    document.querySelector("[data-precio]").value = "";
+    document.querySelector("[data-imagen]").value = "";
+}
+
+botonLimpiar.addEventListener("click", e => limpiarFormulario(e));
 formulario.addEventListener("submit", evento => insertarProducto(evento));
