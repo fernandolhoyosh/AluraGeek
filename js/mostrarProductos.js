@@ -22,7 +22,7 @@ function crearCard(id, nombre, precio, imagen){
 const listaProductosVacia = () => {
     const mensaje = document.createElement("h1");
     mensaje.className = "mensaje-sin-productos";
-    mensaje.textContent = `No se han agregado productos`;
+    mensaje.textContent = `⚠️ No se han agregado productos`;
 
     return mensaje;
 }
@@ -42,3 +42,5 @@ async function mostrarProductos(){
 }
 
 mostrarProductos();
+
+export default crearCard;

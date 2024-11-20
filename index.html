@@ -13,6 +13,10 @@
     <main>
         <section class="contenedor__productos">
             <h2>MIS PRODUCTOS:</h2>
+            <div class="contenedor__busqueda">
+                <input type="text" name="busqueda" placeholder="Buscar producto ..." data-busqueda>
+                <button id="btn-buscar-producto"><img src="assets/lupa.png"></button>
+            </div>
             <ul class="contenedor_productos_cards" data-lista></ul>
         </section>
         
@@ -53,5 +57,6 @@
     <script src="js/mostrarProductos.js" type="module"></script>
     <script src="js/crearProducto.js" type="module"></script>
     <script src="js/eliminarProducto.js" type="module"></script>
+    <script src="js/filtrarProducto.js" type="module"></script>
 </body>
 </html>

@@ -40,7 +40,14 @@ async function enviarProductoEliminar(id) {
     return data;
 }
 
+//Función asincrona para realizar una solicitud de busqueda de un producto en la API JSON-SERVER
+async function buscarProducto(palabra) {
+    const conexion = await fetch(`http://localhost:3001/productos?q=${palabra}`);
+    const data = await conexion.json();
+    return data;
+}
+
 // Exportar funciones
 export const conexionAPI = {
-    listarProductos, enviarProducto, enviarProductoEliminar
+    listarProductos, enviarProducto, enviarProductoEliminar, buscarProducto
 }
