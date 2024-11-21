@@ -89,6 +89,7 @@ main .contenedor__productos .contenedor_productos_cards {
     overflow: auto;
     gap: 10px;
     justify-items: center;
+    align-content: start;
 }
 
 .contenedor__productos .contenedor__busqueda {
@@ -138,7 +139,7 @@ main .contenedor__productos .contenedor_productos_cards {
     color: white;
     padding: 0.625rem;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: 1.1em;
     transition: transform 0.3s ease;
 }
