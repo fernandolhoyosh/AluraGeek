@@ -1,4 +1,5 @@
 import { conexionAPI } from "./conexionAPI.js";
+import mostrarAlerta from "./alertaPop.js";
 
 const formulario = document.querySelector("[data-formulario]");
 const botonLimpiar = document.querySelector("#btn-limpiar-formulario");
@@ -45,7 +46,7 @@ async function insertarProducto(evento){
         esValido = false;
     }
 
-     // Validar que el campo precio no exceda los 50 caracteres
+     // Validar que el campo precio no exceda los 10 caracteres
      if (precio.length > 10) {
         errorPrecio.style.display = 'block';
         errorPrecio.textContent = '⛔ El campo Precio debe contener máximo 10 caracteres.';
@@ -66,7 +67,7 @@ async function insertarProducto(evento){
         try {
             await conexionAPI.enviarProducto(nombre, precio, imagen);
         } catch (error) {
-            alert(error.message);
+            mostrarAlerta(error.message, "red");
         }
     }
 }
