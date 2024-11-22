@@ -33,18 +33,27 @@ async function enviarProducto(nombre, precio, imagen) {
 
 // Función asincrona para realizar una solicitud de eliminar un producto de la API de JSON-SERVER
 async function enviarProductoEliminar(id) {
-    const conexion = await fetch(`http://localhost:3001/productos/${id}`, {
-        method: "DELETE"
-    });
-    const data = await conexion.json();
-    return data;
+    try {
+        const conexion = await fetch(`http://localhost:3001/productos/${id}`, {
+            method: "DELETE"
+        });
+        const data = await conexion.json();
+        return data;
+    } catch (error) {
+        throw new Error("No se puede eliminar el producto. Error de conexión");
+    }
+    
 }
 
 //Función asincrona para realizar una solicitud de busqueda de un producto en la API JSON-SERVER
 async function buscarProducto(palabra) {
-    const conexion = await fetch(`http://localhost:3001/productos?q=${palabra}`);
-    const data = await conexion.json();
-    return data;
+    try {
+        const conexion = await fetch(`http://localhost:3001/productos?q=${palabra}`);
+        const data = await conexion.json();
+        return data;
+    } catch (error) {
+        throw new Error("Error al buscar productos. No hay conexion con el servidor");
+    }
 }
 
 // Exportar funciones

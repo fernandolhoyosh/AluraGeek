@@ -1,4 +1,5 @@
 import { conexionAPI } from "./conexionAPI.js";
+import mostrarAlerta from "./alertaPop.js";
 
 //Codigo que observa cambios en el DOM y ejecuta la funcio ncada vez vez que se observe cambios en el DOM
 
@@ -24,9 +25,15 @@ function eliminarProducto() {
     /* console.log(idProducto); */
     /* console.log(boton); */
 
-    boton.onclick = async function (){
+    boton.onclick = async function (e){
+      e.preventDefault();
         console.log(idProducto);
-        await conexionAPI.enviarProductoEliminar(idProducto);
+        try {
+          await conexionAPI.enviarProductoEliminar(idProducto);
+          mostrarAlerta(`Producto eliminado`,"#8c0375")   
+        } catch (error) {
+          mostrarAlerta(error.message, "red");
+        }
     }
   }
 }

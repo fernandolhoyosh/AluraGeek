@@ -66,6 +66,7 @@ async function insertarProducto(evento){
     } else {
         try {
             await conexionAPI.enviarProducto(nombre, precio, imagen);
+            mostrarAlerta(`Producto añadido exitosamente`, "#4CAF50");
         } catch (error) {
             mostrarAlerta(error.message, "red");
         }
@@ -74,9 +75,7 @@ async function insertarProducto(evento){
 
 const limpiarFormulario = (e) => {
     e.preventDefault();
-    document.querySelector("[data-nombre]").value = "";
-    document.querySelector("[data-precio]").value = "";
-    document.querySelector("[data-imagen]").value = "";
+    formulario.reset();
 }
 
 botonLimpiar.addEventListener("click", e => limpiarFormulario(e));
