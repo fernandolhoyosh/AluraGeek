@@ -36,21 +36,22 @@ Este proyecto es una tienda de productos en la cual puedes **agregar productos, 
 
 1. Clona el repositorio:
    ```
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/fernandolhoyosh/AluraGeek.git
    ```
 2. Navega al directorio del proyecto:
    ```
-   cd tu-repositorio
+   cd AluraGeek
    ```
-3. Instala json-server:
+3. Instala json-server o dependencias:
    ```
    npm install -g json-server
+   npm install
    ```
 4. Inicia el servidor json-server:
 ```
 json-server --watch .\database\db.json
 ```
-Abre index.html en tu navegador para ver la aplicación en funcionamiento.
+5. Abrir index.html en tu navegador para ver la aplicación en funcionamiento.
 
 Uso:
 
