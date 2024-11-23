@@ -12,7 +12,7 @@ function crearCard(id, nombre, precio, imagen){
     <div class="card__producto-info">
         <p>$ ${precio}</p>
         <button class="btn-eliminar-producto" title="Eliminar">
-            <img src="https://github.com/fernandolhoyosh/AluraGeek/blob/online/assets/icon-trash.png">
+            <img src="https://raw.githubusercontent.com/fernandolhoyosh/AluraGeek/refs/heads/online/assets/icon-trash.png">
         </button>
     </div>`;
 
