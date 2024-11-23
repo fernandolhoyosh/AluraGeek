@@ -1,7 +1,7 @@
 // Función asincrona para solicitar listar productos de la API JSON-SEVER
 async function listarProductos() {
     try {
-        const conexion = await fetch("https://api-alurageek-server-ozv3maruh.vercel.app/productos");
+        const conexion = await fetch("https://api-alurageek-server.vercel.app/productos");
         const data = await conexion.json();
         return data;
     } catch (error) {
@@ -13,7 +13,7 @@ async function listarProductos() {
 // Función asincrona para solicitar añadir un nuevo producto a la API de JSON-SEVER
 async function enviarProducto(nombre, precio, imagen) {
     try {
-        const conexion = await fetch("https://api-alurageek-server-ozv3maruh.vercel.app/productos", {
+        const conexion = await fetch("https://api-alurageek-server.vercel.app/productos", {
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify({
@@ -34,7 +34,7 @@ async function enviarProducto(nombre, precio, imagen) {
 // Función asincrona para realizar una solicitud de eliminar un producto de la API de JSON-SERVER
 async function enviarProductoEliminar(id) {
     try {
-        const conexion = await fetch(`https://api-alurageek-server-ozv3maruh.vercel.app/productos/${id}`, {
+        const conexion = await fetch(`https://api-alurageek-server.vercel.app/productos/${id}`, {
             method: "DELETE"
         });
         const data = await conexion.json();
@@ -48,7 +48,7 @@ async function enviarProductoEliminar(id) {
 //Función asincrona para realizar una solicitud de busqueda de un producto en la API JSON-SERVER
 async function buscarProducto(palabra) {
     try {
-        const conexion = await fetch(`https://api-alurageek-server-ozv3maruh.vercel.app/productos?q=${palabra}`);
+        const conexion = await fetch(`https://api-alurageek-server.vercel.app/productos/filtrar?query=${palabra}`);
         const data = await conexion.json();
         return data;
     } catch (error) {
