@@ -1,7 +1,7 @@
 // Función asincrona para solicitar listar productos de la API JSON-SEVER
 async function listarProductos() {
     try {
-        const conexion = await fetch("https://json-server-api-alurageek-5lbi94ysj.vercel.app/productos");
+        const conexion = await fetch("https://api-alurageek-server-ozv3maruh.vercel.app");
         const data = await conexion.json();
         return data;
     } catch (error) {
