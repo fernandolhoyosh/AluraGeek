@@ -139,7 +139,7 @@ main .contenedor__productos .contenedor_productos_cards {
     color: white;
     padding: 0.625rem;
     gap: 10px;
-    justify-content: flex-start;
+    justify-content: space-between;
     font-size: 1.1em;
     transition: transform 0.3s ease;
 }

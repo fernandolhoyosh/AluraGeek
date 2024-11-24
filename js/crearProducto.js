@@ -1,5 +1,6 @@
 import { conexionAPI } from "./conexionAPI.js";
 import mostrarAlerta from "./alertaPop.js";
+import { mostrarCards } from "./mostrarProductos.js";
 
 const formulario = document.querySelector("[data-formulario]");
 const botonLimpiar = document.querySelector("#btn-limpiar-formulario");
@@ -66,7 +67,9 @@ async function insertarProducto(evento){
     } else {
         try {
             await conexionAPI.enviarProducto(nombre, precio, imagen);
+            formulario.reset();
             mostrarAlerta(`Producto añadido exitosamente`, "#4CAF50");
+            await mostrarCards.mostrarProductos();
         } catch (error) {
             mostrarAlerta(error.message, "red");
         }

@@ -1,5 +1,5 @@
 import { conexionAPI } from "./conexionAPI.js";
-import crearCard from "./mostrarProductos.js";
+import {mostrarCards} from "./mostrarProductos.js";
 import mostrarAlerta from "./alertaPop.js";
 
 async function filtrarProducto(evento) {
@@ -14,7 +14,7 @@ async function filtrarProducto(evento) {
             listaProductos.removeChild(listaProductos.firstChild);
         }
     
-        data.forEach(producto => listaProductos.appendChild(crearCard(producto.id, producto.nombre, producto.precio, producto.imagen)));
+        data.forEach(producto => listaProductos.appendChild(mostrarCards.crearCard(producto.id, producto.nombre, producto.precio, producto.imagen)));
     
         if(data.length == 0){
             listaProductos.innerHTML = `<h3 class ="mensaje-sin-productos">ℹ️ No se han encontrado productos para '${datosbusqueda}'</h3>`;

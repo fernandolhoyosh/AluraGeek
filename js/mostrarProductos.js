@@ -30,6 +30,9 @@ const listaProductosVacia = () => {
 async function mostrarProductos(){
     try {
         const data = await conexionAPI.listarProductos();
+        while(listaProductos.firstChild){
+            listaProductos.removeChild(listaProductos.firstChild);
+        }
         if (data.length == 0) {
             listaProductos.appendChild(listaProductosVacia());
         }else {
@@ -43,4 +46,6 @@ async function mostrarProductos(){
 
 mostrarProductos();
 
-export default crearCard;
+export const mostrarCards = {
+    crearCard, mostrarProductos
+}
