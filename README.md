@@ -1,7 +1,7 @@
 
 ![image](https://github.com/user-attachments/assets/34955fa2-1a2b-4a75-b869-36e58475da74)
 
-# 🛒 Proyecto Tienda de Productos
+# 🛒 Proyecto AluraGeek
 
 ## Descripción
 
@@ -52,6 +52,11 @@ Este proyecto es una tienda de productos en la cual puedes **agregar productos, 
 json-server --watch .\database\db.json
 ```
 5. Abrir index.html en tu navegador para ver la aplicación en funcionamiento.
+
+## Demo Live:
+
+https://fernandolhoyosh.github.io/AluraGeek/
+
 
 Uso:
 
