@@ -68,8 +68,8 @@ async function insertarProducto(evento){
         try {
             await conexionAPI.enviarProducto(nombre, precio, imagen);
             formulario.reset();
-            mostrarAlerta(`Producto añadido exitosamente`, "#4CAF50");
             await mostrarCards.mostrarProductos();
+            mostrarAlerta(`Producto añadido exitosamente`, "#4CAF50");
         } catch (error) {
             mostrarAlerta(error.message, "red");
         }
