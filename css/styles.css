@@ -84,6 +84,7 @@ main .contenedor__formulario__productos {
 
 main .contenedor__productos .contenedor_productos_cards {
     display: grid;
+    padding: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(196px, 1fr) );
     height: 50vh;
     overflow: auto;
@@ -134,6 +135,7 @@ main .contenedor__productos .contenedor_productos_cards {
     flex-direction: column;
     width: 196px;
     box-sizing: border-box;
+    box-shadow: 0px 0px 15px #000;
     background-color: var(--color-primario);
     border-radius: 10px;
     color: white;
@@ -342,6 +344,7 @@ footer .contenedor_redes_sociales .iconos-redes-footer {
     main .contenedor__productos .contenedor_productos_cards {
         overflow: hidden;
         height: auto;
+        padding: 1rem .1rem;
     }
     
     main .contenedor__formulario__productos {
