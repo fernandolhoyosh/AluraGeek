@@ -6,6 +6,8 @@ function crearCard(id, nombre, precio, imagen){
     const producto = document.createElement("li");
     producto.id = id;
     producto.className = "card__producto";
+    producto.classList.add("animate__animated");
+    producto.classList.add("animate__fadeIn");
     producto.innerHTML = `
     <img src="${imagen}" class="imagen__producto" alt="imagen producto ${nombre}">
     <p>${nombre}</p>
@@ -27,7 +29,7 @@ const listaProductosVacia = () => {
     return mensaje;
 }
 
-async function mostrarProductos(){
+async function mostrarProductos(animation){
     try {
         const data = await conexionAPI.listarProductos();
         while(listaProductos.firstChild){
