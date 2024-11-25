@@ -134,6 +134,7 @@ main .contenedor__productos .contenedor_productos_cards {
     flex-direction: column;
     width: 196px;
     box-sizing: border-box;
+    box-shadow: 0px 0px 15px #000;
     background-color: var(--color-primario);
     border-radius: 10px;
     color: white;
